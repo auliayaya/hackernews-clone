@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+body{
+ background-color: var(--color-zinc-800) 
+}
+
+.votearrow {
+  background-image: url(https://news.ycombinator.com/triangle.svg),
+    linear-gradient(
+      var(--darkreader-background-00000000, rgba(0, 0, 0, 0)),
+      var(--darkreader-background-00000000, rgba(0, 0, 0, 0))
+    );
+}
