@@ -17,9 +17,9 @@ type (
 		PORT            string
 	}
 	RedisConfig struct {
-		Host     string `required:"true"`
-		Username string `required:"true"`
-		Password string `required:"true"`
+		Host     string `required:"false"`
+		Username string `required:"false"`
+		Password string `required:"false"`
 	}
 )
 

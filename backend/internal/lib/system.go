@@ -20,9 +20,9 @@ type System struct {
 func NewSystem(cfg AppConfig) (*System, error) {
 	s := &System{cfg: cfg}
 	s.initWaiter()
-	if err := s.initRedis(); err != nil {
-		return nil, err
-	}
+	// if err := s.initRedis(); err != nil {
+	// 	return nil, err
+	// }
 	s.initGin()
 	return s, nil
 }

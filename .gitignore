@@ -12,6 +12,16 @@
 /backend/*.out
 /backend/app
 /backend/.env
+/backend/node_modules
+/backend/package-lock.json
+/backend/package.json
+/backend/yarn.lock
+/backend/.serverless
+/backend/serverless.yaml
+/backend/bootstrap
+/backend/bootstrap.zip
+/backend/main
+/backend/.idea
 
 **/.idea/
 **/.vscode/
