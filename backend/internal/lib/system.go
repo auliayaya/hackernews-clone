@@ -74,14 +74,15 @@ func (s *System) Waiter() Waiter {
 }
 
 func (s *System) WaitForWeb(ctx context.Context) error {
+	
 	webServer := &http.Server{
-		Addr:    "localhost:" + s.cfg.PORT,
+		Addr:    "localhost:" + s.cfg.GetPORT(),
 		Handler: s.mux,
 	}
 
 	group, gCtx := errgroup.WithContext(ctx)
 	group.Go(func() error {
-		fmt.Printf("web server started; \nlistening at http://localhost:%s\n", s.cfg.PORT)
+		fmt.Printf("web server started; \nlistening at http://localhost:%s\n", s.cfg.GetPORT())
 		defer fmt.Println("web server shutdown")
 		if err := webServer.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			return err

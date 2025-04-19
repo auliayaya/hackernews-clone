@@ -23,6 +23,12 @@ type (
 	}
 )
 
+func (c *AppConfig) GetPORT() string {
+	if c.PORT == "" {
+		c.PORT = "8080"
+	}
+	return c.PORT
+}
 func InitConfig() (cfg AppConfig, err error) {
 	if err = dotenv.Load(dotenv.EnvironmentFiles(os.Getenv("ENVIRONMENT"))); err != nil {
 		return
